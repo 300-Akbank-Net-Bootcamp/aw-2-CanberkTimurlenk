@@ -86,12 +86,36 @@ All configuration classes have been moved to this folder.
 <br>
 <br>
 
+<hr>
+
+# Getting Started
+
+Ensure that you have the .NET SDK installed on your computer.
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/300-Akbank-Net-Bootcamp/aw-2-CanberkTimurlenk.git
+```
+2. Navigate to Data Project
+```bash
+cd /Vb.Data
+```
+3. Apply migrations (SQL Server Required!)
+```bash
+dotnet ef database update --project "./Vb.Data" --startup-project "./Vb.Api"
+```
+4. Run the project
+```bash
+dotnet run
+```
+<hr>
+
 # Endpoints
 <details>
 <summary>Click to display endpoints</summary>
 <img width="898" alt="Endpoints" src="https://github.com/300-Akbank-Net-Bootcamp/aw-2-CanberkTimurlenk/assets/18058846/78c4ba4e-3ada-4c85-b5a6-47d4fadcb297">
 </details>
-
 
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/GfoSvSyx)
