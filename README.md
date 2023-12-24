@@ -97,15 +97,24 @@ Ensure that you have the .NET SDK installed on your computer.
 ```bash
 git clone https://github.com/300-Akbank-Net-Bootcamp/aw-2-CanberkTimurlenk.git
 ```
-2. Navigate to Data Project
+2. Change connection string with yourself
+
+The connection string is located in ``/Vb.Api/appsettings.json`` <br>
+It must be written correctly to apply migrations successfully.
+
+3. Navigate to Data Project
 ```bash
 cd /Vb.Data
 ```
-3. Apply migrations (SQL Server Required!)
+4. Apply migrations (SQL Server Required!)
 ```bash
 dotnet ef database update --project "./Vb.Data" --startup-project "./Vb.Api"
 ```
-4. Run the project
+5. Navigate to startup project
+```bash
+cd /VbApi
+```
+6. Run the project
 ```bash
 dotnet run
 ```
