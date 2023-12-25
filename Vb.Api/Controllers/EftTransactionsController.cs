@@ -49,8 +49,8 @@ namespace VbApi.Controllers
 
         // Update EftTransaction
         [HttpPut]
-        public async Task<IActionResult> PutAsync(int id, EftTransaction eftTransaction)
-        {            
+        public async Task<IActionResult> PutAsync(EftTransaction eftTransaction)
+        {
             _context.EftTransactions.Update(eftTransaction);
 
             return (await _context.SaveChangesAsync()) > 0

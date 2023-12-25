@@ -52,7 +52,7 @@ namespace VbApi.Controllers
 
         // update contact
         [HttpPut]
-        public async Task<IActionResult> PutAsync(int id, Contact contact)
+        public async Task<IActionResult> PutAsync(Contact contact)
         {
             _context.Contacts.Update(contact);
 
