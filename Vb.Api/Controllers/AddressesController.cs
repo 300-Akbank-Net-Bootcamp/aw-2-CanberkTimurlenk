@@ -9,7 +9,7 @@ namespace VbApi.Controllers
     [ApiController]
     public class AddressesController : ControllerBase
     {
-        private readonly VbDbContext _context; 
+        private readonly VbDbContext _context;
 
         public AddressesController(VbDbContext context)
         {
@@ -49,22 +49,9 @@ namespace VbApi.Controllers
         }
 
         // update address
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutAsync(int id, Address address)
+        [HttpPut]
+        public async Task<IActionResult> PutAsync(Address address)
         {
-            // To follow the common conventions, I added the id to the route even though it is in the request body
-            // Request/Response Model could be used to overcome that, In that case account no more include the id
-
-            if (id != address.Id)
-                return BadRequest();
-            // returns 400 Bad Request if Address id does not match with the id in the route
-
-            var entityExists = (await _context.Addresses.AnyAsync(a => a.Id.Equals(id)));
-            // Since request/response models were not used, I checked if the entity exists manually.
-
-            if (!entityExists)
-                return NotFound(); // returns 404 Not Found if not found
-
             _context.Addresses.Update(address);
 
             return (await _context.SaveChangesAsync()) > 0
