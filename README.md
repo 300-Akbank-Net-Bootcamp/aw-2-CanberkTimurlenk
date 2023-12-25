@@ -46,7 +46,7 @@ public class ContactConfiguration : BaseEntityConfiguration<Contact>
 
 ## Apply All Entity Type Configurations In the Executing Assembly
 
-The DbContext is the place where entity configurations was applied.
+VbDbContext is a class where entity configurations was applied.
 
 ```bash
 /Vb.Data/DbContext/VbDbContext.cs
